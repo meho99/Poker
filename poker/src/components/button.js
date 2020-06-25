@@ -16,16 +16,16 @@ const useStyles = makeStyles({
     },
 });
 
-export const Buton = ({ onClick, text, source, addRound, round, changeButton, passButton }) => {
+export const Buton = ({ onClick, text, source, ChangeRound, round, ChangeButton, PassButton }) => {
     const classes = useStyles();
 
     const click = () => {
         if (text !== "PASS") {
-            addRound(round)
-            changeButton(round)
+            ChangeRound(round)
+            ChangeButton(round)
         }
         else {
-            passButton()
+            PassButton()
         }
 
     }
