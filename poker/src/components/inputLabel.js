@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles({
-    root1: {
+    button: {
         marginLeft: "0px",
         textAlign: "center",
         fontSize: "20px",
@@ -14,28 +14,25 @@ const useStyles = makeStyles({
         fontFamily: "Rockwell",
         minWidth: "88px"
     },
-    root2: {
+    root: {
         maxWidth: "400px",
         width: "100%",
-
     },
 });
 
-
-
 export const InputLabel = ({ text, value, changepool, round, addValue }) => {
     const classes = useStyles();
-    const date = {
+    const data = {
         round: round,
         value: addValue
-
     }
     const changePool = () => {
-        changepool(date)
+        changepool(data)
     }
+
     return (
-        <Grid item xs="8" sm="8" className={classes.root2} >
-            <Button className={classes.root1} onClick={changePool} > + {addValue} $ </Button>
+        <Grid item xs="8" sm="8" className={classes.root} >
+            <Button className={classes.button} onClick={changePool} > + {addValue} $ </Button>
         </Grid>
     )
 }

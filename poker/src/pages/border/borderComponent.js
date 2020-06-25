@@ -97,9 +97,10 @@ export const BorderComponent = ({
                 {
                     inputNames.map((val, index) => (
                         <InputLabel
+                            kay={index}
                             changepool={changePool}
                             round={round}
-                            addValue={inputNames[index]}
+                            addValue={val}
                         />
                     ))
                 }
