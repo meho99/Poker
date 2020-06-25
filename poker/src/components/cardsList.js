@@ -13,8 +13,9 @@ export const CardsComponent = ({ storeCards }) => {
             alignItems="center"
             xs="12">
             {
-                storeCards.map(val => (
+                storeCards.map((val, index) => (
                     <Grid xs="2"
+                        key={index}
                         container
                         direction="row"
                         justify="center"

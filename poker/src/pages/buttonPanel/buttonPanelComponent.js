@@ -23,23 +23,29 @@ const useStyles = makeStyles({
     }
 });
 
-export const ButtonPanelComponent = ({ list, ChangeRound, round, ChangeButton, PassButton }) => {
+
+export const ButtonPanelComponent = ({ buttonPlaceName, ChangeRound, round, ChangeButton, PassButton }) => {
     const classes = useStyles();
+    const onButtonPlaceClick = () => {
+        ChangeRound(round)
+        ChangeButton(round)
+    }
+    const onButtonPassClick = () => {
+        PassButton()
+    }
 
     return (
         <Grid>
             <Grid className={`${classes.button} ${classes.buttonPlace}`}>
                 <Buton
-                    text={list}
-                    ChangeRound={ChangeRound}
-                    ChangeButton={ChangeButton}
-                    round={round}
+                    onClick={onButtonPlaceClick}
+                    text={buttonPlaceName}
                 />
             </Grid >
             <Grid className={`${classes.button} ${classes.buttonPass}`}>
                 <Buton
                     text={"PASS"}
-                    PassButton={PassButton}
+                    onClick={onButtonPassClick}
                 />
             </Grid >
         </Grid>

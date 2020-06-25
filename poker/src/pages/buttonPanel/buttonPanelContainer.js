@@ -6,7 +6,7 @@ import { useChangeRound, useChangeButton, usePassButton } from "./buttonPanelHoo
 
 export const ButtonPanelContainer = () => {
     const reduxProps = {
-        list: useSelector(store => store.buttonsNames),
+        buttonPlaceName: useSelector(store => store.buttonsNames),
         round: useSelector(store => store.round)
     }
     const hooksProps = {
