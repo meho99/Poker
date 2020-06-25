@@ -2,7 +2,7 @@ import React from "react"
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
-import { CardsContainer } from "../cards/cardsContainer"
+import { CardsComponent } from "../../components/cardsList"
 
 const useStyles = makeStyles({
     board: {
@@ -41,13 +41,13 @@ export const BoardComponent = ({ listPlayer2, listPlayer1, boardCards }) => {
             xs="12" className={classes.board}
         >
             <DefaultGrid className={classes.cardsContainer}>
-                <CardsContainer storeCards={listPlayer2} />
+                <CardsComponent storeCards={listPlayer2} />
             </DefaultGrid>
             <DefaultGrid className={classes.cardsContainer} >
-                <CardsContainer storeCards={boardCards} />
+                <CardsComponent storeCards={boardCards} />
             </DefaultGrid>
             <DefaultGrid className={classes.cardsContainer}>
-                <CardsContainer storeCards={listPlayer1} />
+                <CardsComponent storeCards={listPlayer1} />
             </DefaultGrid>
         </Grid>
 
