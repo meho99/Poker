@@ -1,3 +1,15 @@
+export const generateCardsPath = (cardName) => (
+    `../../cards/${cardName}`
+)
+
+const generateSourceTextures = (cardsNumber) => {
+    const sourceTexturesArray = []
+    for (let i = 0; i < cardsNumber; i++) {
+        sourceTexturesArray[i] = generateCardsPath("Default.png")
+    }
+    return sourceTexturesArray
+}
+
 export const addStore = () => {
 
     const cardNames = ["Clubs", "Diamonds", "Hearts", "Spades"]
@@ -9,16 +21,13 @@ export const addStore = () => {
     }
     cards.push("Default")
 
-
-
     const buttons = ["PLACE"]
 
-    const player1 = ["../../cards/Default.png", "../../cards/Default.png"]
 
-    const player2 = ["../../cards/Default.png", "../../cards/Default.png"]
 
-    const board = ["../../cards/Default.png", "../../cards/Default.png", "../../cards/Default.png", "../../cards/Default.png", "../../cards/Default.png"]
-
+    const player1 = generateSourceTextures(2)
+    const player2 = generateSourceTextures(2)
+    const board = generateSourceTextures(5)
     const ico = ["../../textures/player.png", "../../textures/computer.png"]
 
     const store = {
@@ -29,7 +38,6 @@ export const addStore = () => {
         board: board,
         ico: ico,
     }
-
-
     return store
 }
+
