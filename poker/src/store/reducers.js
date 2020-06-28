@@ -20,8 +20,6 @@ const defaultState = {
     playerMinus: [0, 0],
     pool: 0,
 
-
-
     buttonsColors: ["../../textures/ringBlue.png"],
     buttonsNames: store.buttons,
     round: 1,
@@ -37,7 +35,6 @@ const poolRounds = [2, 3, 4, 5]
 const buttonsName = ["PLACE", "GO", "GO", "GO", "GO", "NEXT"]
 
 const newRound = (draft) => {
-    console.log(draft.won)
     if (draft.won === 0) {
         draft.playerCash[0] += draft.pool / 2
         draft.playerCash[1] += draft.pool / 2
@@ -67,14 +64,12 @@ const samePool = (draft) => {
         draft.playerCash[1] -= difference
         draft.playerMinus[1] += difference
         draft.pool += difference
-        console.log("aaa")
     }
     else if (draft.playerMinus[1] > draft.playerMinus[0]) {
         const difference = draft.playerMinus[1] - draft.playerMinus[0]
         draft.playerCash[0] -= difference
         draft.playerMinus[0] += difference
         draft.pool += difference
-        console.log("bbb")
     }
 }
 
@@ -87,20 +82,14 @@ const addPool = (draft, player, prize) => {
 const botPoolAdd = (draft) => {
     let prize = Math.floor(Math.random() * 15);
     prize *= 5
-    console.log(prize)
     addPool(draft, 1, prize)
 }
-
-
 
 export const reducer = handleActions({
     [ACTIONS.CHANGE_BUTTON]: (state, { payload }) =>
         produce(state, draft => {
             draft.buttonsNames = buttonsName[payload]
             samePool(draft)
-
-
-
 
             switch (payload) {
                 case 0:
@@ -110,7 +99,6 @@ export const reducer = handleActions({
                     draft.player1Cards = draft.randPlayer
                     addPool(draft, 0, 50)
                     addPool(draft, 1, 50)
-
                     break;
                 case 2:
                     draft.boardCards[0] = draft.randBorad[0]
@@ -132,10 +120,6 @@ export const reducer = handleActions({
                 default:
                 // do nothing
             }
-
-
-
-
         }),
     [ACTIONS.CHANGE_ROUND]: (state, { payload }) =>
         produce(state, draft => {
@@ -147,8 +131,6 @@ export const reducer = handleActions({
 
     [ACTIONS.CHANGE_POOL]: (state, { payload }) =>
         produce(state, draft => {
-            console.log(payload.round)
-            console.log(payload.value)
             if (poolRounds.includes(payload.round)) {
                 addPool(draft, 0, payload.value)
             }
@@ -156,11 +138,9 @@ export const reducer = handleActions({
 
     [ACTIONS.PASS_ROUND]: (state,) =>
         produce(state, draft => {
-            console.log(draft.pool)
             draft.round = 1
             draft.buttonsNames = buttonsName[0]
             draft.playerCash[1] += draft.pool
-
             draft.playerMinus[0] = 0
             draft.playerMinus[1] = 0
             const random = addRandom()
