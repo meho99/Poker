@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/Poker/static/js/main.cfbb2e8d.chunk.js",
-    "main.js.map": "/Poker/static/js/main.cfbb2e8d.chunk.js.map",
-    "runtime-main.js": "/Poker/static/js/runtime-main.9934cff1.js",
-    "runtime-main.js.map": "/Poker/static/js/runtime-main.9934cff1.js.map",
-    "static/js/2.ac95eb19.chunk.js": "/Poker/static/js/2.ac95eb19.chunk.js",
-    "static/js/2.ac95eb19.chunk.js.map": "/Poker/static/js/2.ac95eb19.chunk.js.map",
-    "index.html": "/Poker/index.html",
-    "precache-manifest.75893d13804cb335caa7c6cb1c5def33.js": "/Poker/precache-manifest.75893d13804cb335caa7c6cb1c5def33.js",
-    "service-worker.js": "/Poker/service-worker.js",
-    "static/js/2.ac95eb19.chunk.js.LICENSE.txt": "/Poker/static/js/2.ac95eb19.chunk.js.LICENSE.txt"
+    "main.js": "/dupamaryna/static/js/main.cfbb2e8d.chunk.js",
+    "main.js.map": "/dupamaryna/static/js/main.cfbb2e8d.chunk.js.map",
+    "runtime-main.js": "/dupamaryna/static/js/runtime-main.250785ac.js",
+    "runtime-main.js.map": "/dupamaryna/static/js/runtime-main.250785ac.js.map",
+    "static/js/2.ac95eb19.chunk.js": "/dupamaryna/static/js/2.ac95eb19.chunk.js",
+    "static/js/2.ac95eb19.chunk.js.map": "/dupamaryna/static/js/2.ac95eb19.chunk.js.map",
+    "index.html": "/dupamaryna/index.html",
+    "precache-manifest.2f2c68349aca87cfa78f85da372fef06.js": "/dupamaryna/precache-manifest.2f2c68349aca87cfa78f85da372fef06.js",
+    "service-worker.js": "/dupamaryna/service-worker.js",
+    "static/js/2.ac95eb19.chunk.js.LICENSE.txt": "/dupamaryna/static/js/2.ac95eb19.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.9934cff1.js",
+    "static/js/runtime-main.250785ac.js",
     "static/js/2.ac95eb19.chunk.js",
     "static/js/main.cfbb2e8d.chunk.js"
   ]
